@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <title>Untitled</title>
+    <link rel="stylesheet" href="./style.css">
+
+  </head>
+    
+  <body>
+  <!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visor Geográfico - Comparador de Ciudades</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🌍 Comparador de Ciudades</h1>
+            <p>Selecciona dos ciudades para comparar sus características</p>
+        </header>
+
+        <div class="selector-section">
+            <div class="city-selector">
+                <label for="city1">Ciudad 1:</label>
+                <select id="city1">
+                    <option value="">-- Selecciona una ciudad --</option>
+                    <option value="madrid">Madrid</option>
+                    <option value="barcelona">Barcelona</option>
+                    <option value="valencia">Valencia</option>
+                    <option value="sevilla">Sevilla</option>
+                    <option value="bilbao">Bilbao</option>
+                    <option value="palma">Palma de Mallorca</option>
+                    <option value="malaga">Málaga</option>
+                    <option value="murcia">Murcia</option>
+                </select>
+            </div>
+
+            <div class="city-selector">
+                <label for="city2">Ciudad 2:</label>
+                <select id="city2">
+                    <option value="">-- Selecciona una ciudad --</option>
+                    <option value="madrid">Madrid</option>
+                    <option value="barcelona">Barcelona</option>
+                    <option value="valencia">Valencia</option>
+                    <option value="sevilla">Sevilla</option>
+                    <option value="bilbao">Bilbao</option>
+                    <option value="palma">Palma de Mallorca</option>
+                    <option value="malaga">Málaga</option>
+                    <option value="murcia">Murcia</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="comparison-section" id="comparisonSection" style="display: none;">
+            <div class="cities-info">
+                <div class="city-card" id="card1">
+                    <h2 id="name1"></h2>
+                    <div class="info-grid">
+                        <div class="info-item">
+                            <span class="label">Población:</span>
+                            <span class="value" id="population1"></span>
+                        </div>
+                        <div class="info-item">
+                            <span class="label">Densidad (hab/km²):</span>
+                            <span class="value" id="density1"></span>
+                        </div>
+                        <div class="info-item">
+                            <span class="label">Fundación:</span>
+                            <span class="value" id="founded1"></span>
+                        </div>
+                        <div class="info-item">
+                            <span class="label">Monumentos Históricos:</span>
+                            <span class="value" id="monuments1"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="city-card" id="card2">
+                    <h2 id="name2"></h2>
+                    <div class="info-grid">
+                        <div class="info-item">
+                            <span class="label">Población:</span>
+                            <span class="value" id="population2"></span>
+                        </div>
+                        <div class="info-item">
+                            <span class="label">Densidad (hab/km²):</span>
+                            <span class="value" id="density2"></span>
+                        </div>
+                        <div class="info-item">
+                            <span class="label">Fundación:</span>
+                            <span class="value" id="founded2"></span>
+                        </div>
+                        <div class="info-item">
+                            <span class="label">Monumentos Históricos:</span>
+                            <span class="value" id="monuments2"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="chart-section">
+                <h3>Evolución de Población a lo Largo del Tiempo</h3>
+                <canvas id="populationChart"></canvas>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+    <script  src="./script.js"></script>
+
+  </body>
+  
+</html>
