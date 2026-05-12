@@ -2,90 +2,82 @@
 const ciudadesData = {
     madrid: {
         nombre: 'Madrid',
-        poblacion: 3281900,
-        densidad: 5432,
-        fundacion: 1083,
-        monumentos: 15,
+        poblacion: 3332035,
+        densidad: 5400,
+        fundacion: '860 d.C.',
         evolucionPoblacion: {
             años: [1950, 1970, 1990, 2000, 2010, 2020, 2026],
-            poblacion: [1618000, 2900000, 3121000, 2938000, 3223000, 3280000, 3281900]
+            poblacion: [1618000, 3146000, 3010000, 2882000, 3273000, 3334000, 3332035]
         }
     },
     barcelona: {
         nombre: 'Barcelona',
-        poblacion: 1620343,
-        densidad: 16008,
-        fundacion: 1137,
-        monumentos: 18,
+        poblacion: 1660122,
+        densidad: 16000,
+        fundacion: '100 a.C.',
         evolucionPoblacion: {
             años: [1950, 1970, 1990, 2000, 2010, 2020, 2026],
-            poblacion: [1280000, 1745000, 1643000, 1496000, 1615000, 1620000, 1620343]
+            poblacion: [1280000, 1745000, 1644000, 1496000, 1619000, 1664000, 1660122]
         }
     },
     valencia: {
         nombre: 'Valencia',
-        poblacion: 1604872,
-        densidad: 5156,
-        fundacion: 138,
-        monumentos: 12,
+        poblacion: 807693,
+        densidad: 6000,
+        fundacion: '138 a.C.',
         evolucionPoblacion: {
             años: [1950, 1970, 1990, 2000, 2010, 2020, 2026],
-            poblacion: [637000, 746000, 777000, 739000, 809000, 1604000, 1604872]
+            poblacion: [509000, 654000, 753000, 739000, 809000, 800000, 807693]
         }
     },
     sevilla: {
         nombre: 'Sevilla',
-        poblacion: 1538985,
-        densidad: 3056,
-        fundacion: 712,
-        monumentos: 14,
+        poblacion: 684025,
+        densidad: 5000,
+        fundacion: '800 a.C.',
         evolucionPoblacion: {
             años: [1950, 1970, 1990, 2000, 2010, 2020, 2026],
-            poblacion: [376000, 550000, 683000, 701000, 704000, 1539000, 1538985]
+            poblacion: [377000, 548000, 683000, 701000, 704000, 691000, 684025]
         }
     },
     bilbao: {
         nombre: 'Bilbao',
-        poblacion: 345122,
-        densidad: 8956,
-        fundacion: 1300,
-        monumentos: 10,
+        poblacion: 346096,
+        densidad: 8300,
+        fundacion: '1300 d.C.',
         evolucionPoblacion: {
             años: [1950, 1970, 1990, 2000, 2010, 2020, 2026],
-            poblacion: [250000, 408000, 383000, 354000, 353000, 345000, 345122]
+            poblacion: [229000, 433000, 370000, 353000, 346000, 351000, 346096]
         }
     },
     palma: {
         nombre: 'Palma de Mallorca',
-        poblacion: 409602,
-        densidad: 2189,
-        fundacion: 1229,
-        monumentos: 8,
+        poblacion: 403350,
+        densidad: 2300,
+        fundacion: '123 a.C.',
         evolucionPoblacion: {
             años: [1950, 1970, 1990, 2000, 2010, 2020, 2026],
-            poblacion: [101000, 216000, 320000, 359000, 401000, 409000, 409602]
+            poblacion: [137000, 234000, 297000, 334000, 405000, 423000, 403350]
         }
     },
     malaga: {
         nombre: 'Málaga',
-        poblacion: 578460,
-        densidad: 3892,
-        fundacion: 1500,
-        monumentos: 9,
+        poblacion: 586384,
+        densidad: 4600,
+        fundacion: '770 a.C.',
         evolucionPoblacion: {
             años: [1950, 1970, 1990, 2000, 2010, 2020, 2026],
-            poblacion: [178000, 304000, 503000, 534000, 568000, 578000, 578460]
+            poblacion: [276000, 374000, 503000, 531000, 568000, 578000, 586384]
         }
     },
     murcia: {
         nombre: 'Murcia',
-        poblacion: 438887,
-        densidad: 2943,
-        fundacion: 825,
-        monumentos: 7,
+        poblacion: 469177,
+        densidad: 540,
+        fundacion: '825 d.C.',
         evolucionPoblacion: {
             años: [1950, 1970, 1990, 2000, 2010, 2020, 2026],
-            poblacion: [201000, 254000, 367000, 389000, 438000, 438000, 438887]
+            poblacion: [218000, 244000, 289000, 357000, 441000, 459000, 469177]
         }
     }
 };
@@ -129,9 +121,8 @@ function mostrarDatos(cityKey, cardId, suffix) {
     document.getElementById(`population${suffix}`).textContent = 
         ciudad.poblacion.toLocaleString('es-ES') + ' hab.';
     document.getElementById(`density${suffix}`).textContent = 
-        ciudad.densidad.toLocaleString('es-ES');
+        ciudad.densidad.toLocaleString('es-ES') + ' hab/km²';
     document.getElementById(`founded${suffix}`).textContent = ciudad.fundacion;
-    document.getElementById(`monuments${suffix}`).textContent = ciudad.monumentos;
 }
 
 function actualizarGrafica(city1Key, city2Key) {
